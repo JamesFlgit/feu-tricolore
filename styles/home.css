@@ -38,8 +38,13 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.home-game__red-active {
-  background-color: #a9a9a9;
+.home-game__off {
+  inline-size: 100px;
+  block-size: 100px;
+  border-radius: 50%;
+  background-color: #1b1616;
+}
+.home-game__red.active {
   inline-size: 100px;
   block-size: 100px;
   border-radius: 50%;
@@ -47,8 +52,7 @@ body {
   transition: background-color 0.5s ease;
   box-shadow: 0 0 100px rgba(255, 59, 59, 0.9);
 }
-.home-game__orange {
-  background-color: #a9a9a9;
+.home-game__orange.active {
   inline-size: 100px;
   block-size: 100px;
   border-radius: 50%;
@@ -56,14 +60,17 @@ body {
   transition: background-color 0.5s ease;
   box-shadow: 0 0 100px rgba(255, 106, 0, 0.9);
 }
-.home-game__green {
-  background-color: #a9a9a9;
+.home-game__green.active {
   inline-size: 100px;
   block-size: 100px;
   border-radius: 50%;
   background-color: green;
   transition: background-color 0.5s ease;
   box-shadow: 0 0 100px rgba(26, 196, 32, 0.8);
+}
+.home-game__buttons-play-game {
+  display: flex;
+  flex-direction: column;
 }
 
 button {

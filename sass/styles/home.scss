@@ -8,7 +8,6 @@ body  {
 
 // Mixin pour les lumières
 @mixin traffic-light($color) {
-    background-color: base.$gray2;
     inline-size: 100px;
     block-size: 100px;
     border-radius: 50%;
@@ -39,17 +38,27 @@ body  {
         justify-content: space-around;
         align-items: center;
     }
-    &__red-active  {
+    &__off  {
+        inline-size: 100px;
+        block-size: 100px;
+        border-radius: 50%;
+        background-color: base.$gray2
+    }
+    &__red.active  {
         @include traffic-light(base.$red);
         box-shadow: 0 0 100px rgba(255, 59, 59, 0.9);
     }
-    &__orange  {
+    &__orange.active {
         @include traffic-light(base.$orange);
         box-shadow: 0 0 100px rgba(255, 106, 0, 0.9);
     }
-    &__green  {
+    &__green.active  {
         @include traffic-light(base.$green);
         box-shadow: 0 0 100px rgba(26, 196, 32, 0.8);
+    }
+    &__buttons-play-game  {
+        display: flex;
+        flex-direction: column;
     }
 }
 
