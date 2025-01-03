@@ -1,0 +1,7 @@
+@use "../base";
+@use "../utils/typography";
+
+
+body  {
+    font-family: base.$base-text-lato;
+}
