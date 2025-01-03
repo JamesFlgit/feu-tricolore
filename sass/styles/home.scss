@@ -5,3 +5,63 @@
 body  {
     font-family: base.$base-text-lato;
 }
+
+// Mixin pour les lumières
+@mixin traffic-light($color) {
+    background-color: base.$gray2;
+    inline-size: 100px;
+    block-size: 100px;
+    border-radius: 50%;
+    background-color: $color;
+    transition: background-color 0.5s ease;
+}
+
+
+.home-game  {
+    block-size: 974px;
+    background-color: base.$dark-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__traffic-light  {
+        z-index: 1;
+        min-inline-size: 150px;
+        max-inline-size: 200px;
+        border-radius: 10px;
+        padding: 10px;
+        block-size: 400px;
+        margin-block-start: 200px;
+        margin-block-end: 50px;
+        background-color: base.$gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__red-active  {
+        @include traffic-light(base.$red);
+        box-shadow: 0 0 100px rgba(255, 59, 59, 0.9);
+    }
+    &__orange  {
+        @include traffic-light(base.$orange);
+        box-shadow: 0 0 100px rgba(255, 106, 0, 0.9);
+    }
+    &__green  {
+        @include traffic-light(base.$green);
+        box-shadow: 0 0 100px rgba(26, 196, 32, 0.8);
+    }
+}
+
+button  {
+    border: none;
+    background-color: base.$btn-gray;
+    inline-size: 300px;
+    block-size: 50px;
+    border-radius: 24px;
+    margin-block-start: 30px;
+    margin-inline: auto;
+}
+button:hover {
+    background-color: base.$btn-gray2;
+}
